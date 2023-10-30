@@ -41,13 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun OnPreviewClicked() {
-//        val contactName = contactNameEditText?.text.toString()
-//        val contactNumber = contactNumberEditText?.text.toString()
-//        val myDisplayName = myDisplayNameEditText?.text.toString()
-//        val includeJunior = juniorCheckBox?.isChecked
-//        val jobTitle = jobTitleSpinner?.selectedItem?.toString()
-//        val immediateStart = immediateStartCheckBox?.isChecked
-//        val startDate = startDateEditText?.text.toString()
+
 
         val message = Message(
             contactNameEditText?.text.toString(),
@@ -60,19 +54,10 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-       // val contactNameEditText = edit_text_contact_name.text.toString();
-        //*val testString = "Contact name:"+ contactNameEditText?.text.toString() + ", " +contactNumberEditText?.text.toString() +", " +juniorCheckBox?.isChecked
-        //val testString = "Contact name: $contactNameEditText"
-        //*Toast.makeText(this,testString,Toast.LENGTH_LONG).show()
+       
         val previewActivityIntent= Intent(this, PreviewActivity::class.java)
         previewActivityIntent.putExtra("Message", message)
-//        previewActivityIntent.putExtra("Contact Name",contactName)
-//        previewActivityIntent.putExtra("Contact Number",contactNumber)
-//        previewActivityIntent.putExtra("My Display Name",myDisplayName)
-//        previewActivityIntent.putExtra("Include Junior",includeJunior)
-//        previewActivityIntent.putExtra("Job Title",jobTitle)
-//        previewActivityIntent.putExtra("Immediate Start",immediateStart)
-//        previewActivityIntent.putExtra("Start Date",startDate)
+
         startActivity(previewActivityIntent)
 
 
